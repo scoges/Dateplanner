@@ -1,6 +1,27 @@
+head{
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
+  background-image: url(./banner1.png);
+  background-size: 900px;
+}
+.title {
+  text-align: center;
+  align-items: center;
+  color: #3feaf7;
+}
+
+.lead{
+  text-align: center;
+  align-items: center;
+  color: #4af8e1;
 }
 
 textarea {
@@ -16,7 +37,7 @@ textarea {
   white-space: pre-wrap;
 }
 
-.time-b {
+.time-block {
   border-radius: 15px;
 }
 
