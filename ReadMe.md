@@ -30,6 +30,6 @@ WHEN I refresh the page
 
 THEN the saved events persist
 
-<div align="center">
-    <img src="./screenshot" width="400px"</img> 
+<div>
+    <img src="./screenshot" width="400px"></img> 
 </div>
