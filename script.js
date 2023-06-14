@@ -1,15 +1,14 @@
 $(document).ready(function () {
   var dis = document.querySelector("#currentDay");
-  var curtime = dayjs().format("dddd, MMMMM, YYYY, h:mm:ss");
+  var curtime = dayjs(new Date()).format("dddd, MMMM D YYYY, h:mm:ss");
   dis.textContent = curtime;
 
 
-$(".saveBtn").click(function (event) {event.preventDefault();
-  var act = $(this).siblings("description").val()
-  var time = $(this).parent ().attr("id").split("-")[1];
-  localStorage.setItem(time, act)})
-  
-  
+$(".saveBtn").on("click", function (){
+  var time = $(this).parent().attr("id");
+  var act = $(this).siblings(".description").val();
+  localStorage.setItem(time, act);});
+
 $(".time-b").each(function (){var block = $(this).attr("id").split("-")[1];
   var curr = dayjs().hour();
   if (curr == block){
@@ -23,24 +22,43 @@ $(".time-b").each(function (){var block = $(this).attr("id").split("-")[1];
       $(this).addClass("future");
     }
     
-  } )
+  } )})
+  
+  var hour06= localStorage.getItem("hour-06");
+  var hour07 = localStorage.getItem("hour-07");
+  var hour08 = localStorage.getItem("hour-08");
+  var hour09 = localStorage.getItem("hour-09");
+  var hour10 = localStorage.getItem("hour-10");
+  var hour11 = localStorage.getItem("hour-11");
+  var hour12 = localStorage.getItem("hour-12");
+  var hour13 = localStorage.getItem("hour-13");
+  var hour14 = localStorage.getItem("hour-14");
+  var hour15 = localStorage.getItem("hour-15");
+  var hour16 = localStorage.getItem("hour-16");
+  var hour17 = localStorage.getItem("hour-17");
+  var hour18 = localStorage.getItem("hour-18");
+  var hour19 = localStorage.getItem("hour-19");
+  var hour20 = localStorage.getItem("hour-20");
+  var hour21 = localStorage.getItem("hour-21");
+  var hour22 = localStorage.getItem("hour-22");
+  var hour23 = localStorage.getItem("hour-23");
+  
+  $("#hour-06 .description").val(hour06);
+  $("#hour-07 .description").val(hour07);
+  $("#hour-08 .description").val(hour08)
+  $("#hour-09 .description").val(hour09);
+  $("#hour-10 .description").val(hour10);
+  $("#hour-11 .description").val(hour11);
+  $("#hour-12 .description").val(hour12);
+  $("#hour-13 .description").val(hour13);
+  $("#hour-14 .description").val(hour14);
+  $("#hour-15 .description").val(hour15);
+  $("#hour-16 .description").val(hour16);
+  $("#hour-17 .description").val(hour17);
+  $("#hour-18 .description").val(hour18);
+  $("#hour-19 .description").val(hour19);
+  $("#hour-20 .description").val(hour20);
+  $("#hour-21 .description").val(hour21);
+  $("#hour-22 .description").val(hour22);
+  $("#hour-23 .description").val(hour23);
 
-$("#hour-06 .time-b").val(localStorage.getItem("06"));
-$("#hour-07 .time-b").val(localStorage.getItem("07"));
-$("#hour-08 .time-b").val(localStorage.getItem("08"));
-$("#hour-09 .time-b").val(localStorage.getItem("09"));
-$("#hour-10 .time-b").val(localStorage.getItem("10"));
-$("#hour-11 .time-b").val(localStorage.getItem("11"));
-$("#hour-12 .time-b").val(localStorage.getItem("12"));
-$("#hour-13 .time-b").val(localStorage.getItem("13"));
-$("#hour-14 .time-b").val(localStorage.getItem("14"));
-$("#hour-15 .time-b").val(localStorage.getItem("15"));
-$("#hour-16 .time-b").val(localStorage.getItem("16"));
-$("#hour-17 .time-b").val(localStorage.getItem("17"));
-$("#hour-18 .time-b").val(localStorage.getItem("18"));
-$("#hour-19 .time-b").val(localStorage.getItem("19"));
-$("#hour-20 .time-b").val(localStorage.getItem("20"));
-$("#hour-21 .time-b").val(localStorage.getItem("21"));
-$("#hour-22 .time-b").val(localStorage.getItem("22"));
-$("#hour-23 .time-b").val(localStorage.getItem("23"));
-})
