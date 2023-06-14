@@ -31,3 +31,7 @@ WHEN I refresh the page
 THEN the saved events persist
 
 ![Screenshot 2023-06-05 10 53 02 PM](https://github.com/scoges/Dateplanner/assets/131681487/3102c73e-18a1-4777-bbba-d9ce68f06a7f)
+
+
+Live url : [
+](https://scoges.github.io/Dateplanner/)https://scoges.github.io/Dateplanner/
